@@ -1,3 +1,3 @@
-import PLUGIN from '../src/index.js'
+import cursor from '../src/index.js'
 
-export default PLUGIN
+export default cursor

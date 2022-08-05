@@ -1,58 +1,16 @@
-**--- DELETE START ---**
+# Alpine JS Cursor
 
-# Alpine JS Plugin Template
-
-This is a template repository to help developers quickly build Alpine JS plugins.
-
-## How to Use
-
-1. Clone the repository with the "Use this template" button on GitHub
-2. Run `npm install` to install ES Build
-3. Build your plugin
-
-### Compiling
-
-To compile the code you run `npm run build` which will create two files in the `/dist` directory.
-
-### Testing
-
-In this template you will find a `/testing/index.html` file that you can use for testing how the Alpine JS plugin works.
-
-I recommend using [vercel/serve](https://www.npmjs.com/package/serve) to serve this file.
-
-## Things to Change
-
-- Find and replace "NAME" with the plugin name
-- Find and replace "FILE" with the name of your compiled file
-- Find and replace "PLUGIN" with the name of your exported function
-- Uncomment "/testing" in the `.gitignore` file
-
-🚨 Make sure find and replace is case sensitive
-
-If you were creating a plugin called "Alpine JS CSV" you could do the following:
-
-- "NAME" to "CSV"
-- "FILE" to "csv"
-- "PLUGIN" to "CSV"
-
-### License
-
-The choice of adding a license and what license is best for your project is up to you.
-
-[Adding a License on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository)
-
-**--- DELETE END ---**
-
-# Alpine JS NAME
-
-Description of the plugin.
+Create a custom cursor with Alpine JS and easily apply hover effects 👆
 
 ## Install
 
 ### With a CDN
 
 ```html
-<script defer src="https://unpkg.com/NAME@latest/dist/FILE.min.js"></script>
+<script
+  defer
+  src="https://unpkg.com/alpinejs-cursor@latest/dist/cursor.min.js"
+></script>
 
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 ```
@@ -60,27 +18,69 @@ Description of the plugin.
 ### With a Package Manager
 
 ```shell
-yarn add -D NAME
+yarn add -D alpinejs-cursor
 
-npm install -D NAME
+npm install -D alpinejs-cursor
 ```
 
 ```js
 import Alpine from 'alpinejs'
-import component from 'NAME'
+import cursor from 'alpinejs-cursor'
 
-Alpine.plugin(component)
+Alpine.plugin(cursor)
 
 Alpine.start()
 ```
 
 ## Example
 
-Examples of how the plugin works.
+This plugin makes use of the [custom-cursor package](https://github.com/markmead/custom-cursor).
+
+```html
+<body x-data x-cursor>
+  ...
+</body>
+```
+
+### Modifiers
+
+You can pass a single modifier to `x-cursor` which will modifier how many cursor are created.
+
+```html
+<body x-data x-cursor.5>
+  ...
+</body>
+```
+
+In this example it will create 5 cursor.
+
+### Attributes
+
+You can use the `x-cursor-target` attribute to pass through an array of HTML elements that will apply a unique CSS class name to the `<body>` tag that you can use for hover effects.
+
+```html
+<body x-data x-cursor x-cursor-targets='["button", "#form", ".click"]'>
+  ...
+</body>
+```
+
+In this example it will create the following classes.
+
+- `cursor-hover--button`
+- `cursor-hover--form`
+- `cursor-hover--click`
+
+Which you can then use in CSS like this.
+
+```css
+.cursor-hover--button [data-cursor] {
+  background: #00f;
+}
+```
 
 ## Stats
 
-![](https://img.shields.io/bundlephobia/min/alpinejs-NAME)
-![](https://img.shields.io/npm/v/alpinejs-NAME)
-![](https://img.shields.io/npm/dt/alpinejs-NAME)
-![](https://img.shields.io/github/license/markmead/alpinejs-NAME)
+![](https://img.shields.io/bundlephobia/min/alpinejs-cursor)
+![](https://img.shields.io/npm/v/alpinejs-cursor)
+![](https://img.shields.io/npm/dt/alpinejs-cursor)
+![](https://img.shields.io/github/license/markmead/alpinejs-cursor)
