@@ -1,6 +1,6 @@
 {
   "name": "alpinejs-cursor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a custom cursor with Alpine JS and easily apply hover effects 👆",
   "keywords": [
     "Alpine",
@@ -18,7 +18,7 @@
     "build": "node scripts/build.js"
   },
   "devDependencies": {
-    "custom-cursor": "^2.2.2",
-    "esbuild": "^0.14.53"
+    "custom-cursor": "^2.2.3",
+    "esbuild": "^0.16.2"
   }
 }

@@ -1,5 +1,3 @@
 import cursor from '../src/index.js'
 
-document.addEventListener('alpine:init', () => {
-  window.Alpine.plugin(cursor)
-})
+document.addEventListener('alpine:init', () => window.Alpine.plugin(cursor))
