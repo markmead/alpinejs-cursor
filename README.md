@@ -1,4 +1,4 @@
-# Custom Cursor 👆
+# Alpine JS Cursor 👆
 
 ![](https://img.shields.io/bundlephobia/min/alpinejs-cursor)
 ![](https://img.shields.io/npm/v/alpinejs-cursor)
