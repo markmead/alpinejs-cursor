@@ -1,8 +1,5 @@
 # Custom Cursor 👆
 
-> [!IMPORTANT] 
-> This plugin is no longer maintained or supported.
-
 ![](https://img.shields.io/bundlephobia/min/alpinejs-cursor)
 ![](https://img.shields.io/npm/v/alpinejs-cursor)
 ![](https://img.shields.io/npm/dt/alpinejs-cursor)
