@@ -1,24 +1,22 @@
 {
   "name": "alpinejs-cursor",
-  "version": "1.0.2",
-  "description": "Create a custom cursor with Alpine JS and easily apply hover effects 👆",
+  "version": "1.1.0",
+  "description": "Create your own custom cursor with minimal JavaScript. Easy to implement, customizable, and lightweight solution for interactive web experiences 👆",
   "keywords": [
-    "Alpine",
-    "Alpine JS",
-    "Alpine JS Plugin",
-    "Alpine JS Plugins",
-    "Alpine JS Cursor",
-    "Cursor",
-    "Custom Cursor"
+    "alpine",
+    "alpinejs",
+    "cursor",
+    "custom-cursor",
+    "interactive"
   ],
   "author": "Mark Mead",
-  "module": "dist/cursor.esm.js",
-  "unpkg": "dist/cursor.min.js",
+  "module": "dist/esm.min.js",
+  "unpkg": "dist/cdn.min.js",
   "scripts": {
     "build": "node scripts/build.js"
   },
   "devDependencies": {
-    "custom-cursor": "^2.2.4",
+    "custom-cursor": "^2.3.0",
     "esbuild": "^0.25.0"
   }
 }
