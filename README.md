@@ -1,25 +1,46 @@
-# Alpine JS Cursor
+# Custom Cursor 👆
 
-Create a custom cursor with Alpine JS and easily apply hover effects 👆
+![](https://img.shields.io/bundlephobia/min/alpinejs-cursor)
+![](https://img.shields.io/npm/v/alpinejs-cursor)
+![](https://img.shields.io/npm/dt/alpinejs-cursor)
+![](https://img.shields.io/github/license/markmead/alpinejs-cursor)
+
+This is a tiny JavaScript package that creates custom cursor for you with
+minimal JavaScript and allows you to write hover effects for the cursor(s) in
+CSS.
+
+## Features
+
+- 🪶 Lightweight (< 1kb minified)
+- 🎨 Fully customizable with CSS
+- ⚡ Simple API with minimal configuration
+- 🔄 Multiple cursor support for follow-along effects
+- 🎯 Target specific elements for custom hover states
+- 📱 Works with mouse and touch devices
+
+Perfect for creative websites, portfolios, and interactive experiences where you
+want to replace the default cursor with something more engaging.
 
 ## Install
 
-### With a CDN
+## CDN
+
+For this package to work with a CDN, you'll need to access the `Cursor` class
+from the `window` object.
 
 ```html
 <script
   defer
-  src="https://unpkg.com/alpinejs-cursor@latest/dist/cursor.min.js"
+  src="https://unpkg.com/alpinejs-cursor@latest/dist/cdn.min.js"
 ></script>
 
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/alpinejs@latest/dist/cdn.min.js"></script>
 ```
 
-### With a Package Manager
+## Package
 
 ```shell
 yarn add -D alpinejs-cursor
-
 npm install -D alpinejs-cursor
 ```
 
@@ -32,55 +53,53 @@ Alpine.plugin(cursor)
 Alpine.start()
 ```
 
-## Example
+## Usage
 
-This plugin makes use of the [custom-cursor package](https://github.com/markmead/custom-cursor).
+Alpine JS Cursor is built upon
+[Custom Cursor](https://github.com/markmead/custom-cursor), a vanilla JavaScript
+library for creating custom cursors. This Alpine.js wrapper provides the same
+functionality with Alpine's declarative syntax.
+
+## Basic Example
+
+To create a simple custom cursor:
 
 ```html
 <body x-data x-cursor>
-  ...
+  //
 </body>
 ```
 
-### Modifiers
+## Advanced Examples
 
-You can pass a single modifier to `x-cursor` which will modifier how many cursor are created.
+### Multiple Cursors
+
+Create a trail effect with multiple cursors:
 
 ```html
 <body x-data x-cursor.5>
-  ...
+  <!-- Creates 5 cursor elements that follow in sequence -->
 </body>
 ```
 
-In this example it will create 5 cursor.
+### Custom Hover States
 
-### Attributes
-
-You can use the `x-cursor-target` attribute to pass through an array of HTML elements that will apply a unique CSS class name to the `<body>` tag that you can use for hover effects.
+Define specific elements that will trigger cursor style changes:
 
 ```html
-<body x-data x-cursor x-cursor-targets='["button", "#form", ".click"]'>
-  ...
+<body x-data x-cursor x-cursor-targets='["button", ".link", "#hero"]'>
+  //
 </body>
 ```
 
-In this example it will create the following classes.
+## Options
 
-- `cursor-hover--button`
-- `cursor-hover--form`
-- `cursor-hover--click`
+Alpine JS Cursor maintains the same API as the original Custom Cursor plugin:
 
-Which you can then use in CSS like this.
+| Custom Cursor Option | Alpine JS Implementation | Description                                     |
+| -------------------- | ------------------------ | ----------------------------------------------- |
+| `count`              | `x-cursor.5`             | Creates multiple cursor elements (trail effect) |
+| `targets`            | `x-cursor-targets`       | Elements that trigger hover states              |
 
-```css
-.cursor-hover--button [data-cursor] {
-  background: #00f;
-}
-```
-
-## Stats
-
-![](https://img.shields.io/bundlephobia/min/alpinejs-cursor)
-![](https://img.shields.io/npm/v/alpinejs-cursor)
-![](https://img.shields.io/npm/dt/alpinejs-cursor)
-![](https://img.shields.io/github/license/markmead/alpinejs-cursor)
+For more advanced usage and options, refer to the
+[Custom Cursor documentation](https://github.com/markmead/custom-cursor).
