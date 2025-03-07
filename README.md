@@ -1,6 +1,7 @@
 # Custom Cursor 👆
 
-> [!IMPORTANT] This plugin is no longer maintained or supported.
+> [!IMPORTANT] 
+> This plugin is no longer maintained or supported.
 
 ![](https://img.shields.io/bundlephobia/min/alpinejs-cursor)
 ![](https://img.shields.io/npm/v/alpinejs-cursor)
@@ -98,10 +99,10 @@ Define specific elements that will trigger cursor style changes:
 
 Alpine JS Cursor maintains the same API as the original Custom Cursor plugin:
 
-| Custom Cursor Option | Alpine JS Implementation                         | Description                                     |
-| -------------------- | ------------------------------------------------ | ----------------------------------------------- |
-| `count`              | `x-cursor.5`                                     | Creates multiple cursor elements (trail effect) |
-| `targets`            | `x-cursor-targets='["button", ".class", "#id"]'` | Elements that trigger hover states              |
+| Custom Cursor Option | Alpine JS Implementation | Description                                     |
+| -------------------- | ------------------------ | ----------------------------------------------- |
+| `count`              | `x-cursor.5`             | Creates multiple cursor elements (trail effect) |
+| `targets`            | `x-cursor-targets`       | Elements that trigger hover states              |
 
 For more advanced usage and options, refer to the
 [Custom Cursor documentation](https://github.com/markmead/custom-cursor).
