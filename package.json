@@ -16,7 +16,7 @@
     "build": "node scripts/build.js"
   },
   "devDependencies": {
-    "custom-cursor": "^2.3.0",
+    "custom-cursor": "^2.3.1",
     "esbuild": "^0.25.0"
   }
 }

@@ -7,7 +7,7 @@ export default function (Alpine) {
     const hoverTargets = JSON.parse(el.getAttribute('x-cursor-targets'))
 
     new Cursor({
-      count: Number(cursorCount) || 0,
+      count: Number(cursorCount) || 1,
       targets: hoverTargets,
     })
   })
